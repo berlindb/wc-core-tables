@@ -84,6 +84,16 @@ final class OrdersQueryOverride {
 
 		$args = $query->get_query_args();
 
+		/*
+		 * BerlinDB resolves a table's physical name via $wpdb->{table_name}, but
+		 * WordPress only registers its own tables there - not WooCommerce's. Register
+		 * wc_orders so the BerlinDB query resolves {$prefix}wc_orders instead of "".
+		 */
+		global $wpdb;
+		if ( empty( $wpdb->wc_orders ) ) {
+			$wpdb->wc_orders = $wpdb->prefix . 'wc_orders';
+		}
+
 		$berlin  = new OrdersQuery( self::translate_args( $args ) );
 		$ids     = array_map( 'intval', $berlin->items );
 		$found   = (int) $berlin->get_found_items();
