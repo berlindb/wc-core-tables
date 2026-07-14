@@ -1,5 +1,12 @@
 # wc-core-tables
 
+![WooCommerce readiness](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/berlindb/wc-core-tables/master/.readiness/woocommerce.json)
+
+The **readiness** badge is the behavioral (column-flag) score from
+[berlindb/readiness](https://github.com/berlindb/readiness). These schemas are authored
+*on* `berlindb/core`, so 100% is expected **by construction** - it confirms the tables
+are fully reproduced, and would drop only if a core flag went missing.
+
 BerlinDB schemas for **WooCommerce's** core database tables - **auto-generated** by
 introspecting a live install, and continuously tested to measure whether shared
 [`berlindb/core`](https://github.com/berlindb/core) can faithfully reproduce them.
