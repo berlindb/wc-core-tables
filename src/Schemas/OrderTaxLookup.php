@@ -23,8 +23,8 @@ class OrderTaxLookup extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'order_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
-			array( 'name' => 'tax_rate_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'order_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'tax_rate_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
 			array( 'name' => 'date_created', 'type' => 'datetime', 'default' => '0000-00-00 00:00:00' ),
 			array( 'name' => 'shipping_tax', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),
 			array( 'name' => 'order_tax', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),

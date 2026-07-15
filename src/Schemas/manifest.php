@@ -16,7 +16,6 @@ return array(
 	'CustomerLookup' => 'wc_customer_lookup',
 	'DownloadLog' => 'wc_download_log',
 	'DownloadableProductPermissions' => 'woocommerce_downloadable_product_permissions',
-	'EmailUnsubscribes' => 'wc_email_unsubscribes',
 	'Log' => 'woocommerce_log',
 	'OrderAddresses' => 'wc_order_addresses',
 	'OrderCouponLookup' => 'wc_order_coupon_lookup',

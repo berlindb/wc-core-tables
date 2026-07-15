@@ -23,7 +23,7 @@ class ProductDownloadDirectories extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'url_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'url_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
 			array( 'name' => 'url', 'type' => 'varchar', 'length' => '256', 'default' => false ),
 			array( 'name' => 'enabled', 'type' => 'tinyint', 'length' => '1', 'unsigned' => false, 'default' => '0' ),
 	);

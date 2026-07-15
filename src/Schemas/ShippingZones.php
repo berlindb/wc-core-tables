@@ -23,9 +23,9 @@ class ShippingZones extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'zone_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'zone_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
 			array( 'name' => 'zone_name', 'type' => 'varchar', 'length' => '200', 'default' => false ),
-			array( 'name' => 'zone_order', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'zone_order', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
 	);
 
 	/** @var array<int, array<string, mixed>> */
