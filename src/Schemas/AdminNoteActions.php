@@ -23,8 +23,8 @@ class AdminNoteActions extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'action_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
-			array( 'name' => 'note_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'action_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'note_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
 			array( 'name' => 'name', 'type' => 'varchar', 'length' => '255', 'default' => false ),
 			array( 'name' => 'label', 'type' => 'varchar', 'length' => '255', 'default' => false ),
 			array( 'name' => 'query', 'type' => 'longtext' ),

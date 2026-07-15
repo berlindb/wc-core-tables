@@ -23,8 +23,8 @@ class ReservedStock extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'order_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => false, 'default' => false ),
-			array( 'name' => 'product_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => false, 'default' => false ),
+			array( 'name' => 'order_id', 'type' => 'bigint', 'unsigned' => false, 'default' => false ),
+			array( 'name' => 'product_id', 'type' => 'bigint', 'unsigned' => false, 'default' => false ),
 			array( 'name' => 'stock_quantity', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),
 			array( 'name' => 'timestamp', 'type' => 'datetime', 'default' => '0000-00-00 00:00:00' ),
 			array( 'name' => 'expires', 'type' => 'datetime', 'default' => '0000-00-00 00:00:00' ),

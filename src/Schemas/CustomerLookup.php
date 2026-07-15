@@ -23,8 +23,8 @@ class CustomerLookup extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'customer_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
-			array( 'name' => 'user_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
+			array( 'name' => 'customer_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'user_id', 'type' => 'bigint', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'username', 'type' => 'varchar', 'length' => '60', 'default' => '' ),
 			array( 'name' => 'first_name', 'type' => 'varchar', 'length' => '255', 'default' => false ),
 			array( 'name' => 'last_name', 'type' => 'varchar', 'length' => '255', 'default' => false ),

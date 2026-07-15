@@ -23,10 +23,10 @@ class DownloadLog extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'download_log_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'download_log_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
 			array( 'name' => 'timestamp', 'type' => 'datetime', 'default' => false ),
-			array( 'name' => 'permission_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
-			array( 'name' => 'user_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
+			array( 'name' => 'permission_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'user_id', 'type' => 'bigint', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'user_ip_address', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => '' ),
 	);
 

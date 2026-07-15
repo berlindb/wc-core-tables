@@ -23,17 +23,17 @@ class Orders extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'primary' => true, 'default' => false ),
+			array( 'name' => 'id', 'type' => 'bigint', 'unsigned' => true, 'primary' => true, 'default' => false ),
 			array( 'name' => 'status', 'type' => 'varchar', 'length' => '20', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'currency', 'type' => 'varchar', 'length' => '10', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'type', 'type' => 'varchar', 'length' => '20', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'tax_amount', 'type' => 'decimal', 'length' => '26', 'scale' => '8', 'unsigned' => false, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'total_amount', 'type' => 'decimal', 'length' => '26', 'scale' => '8', 'unsigned' => false, 'allow_null' => true, 'default' => null ),
-			array( 'name' => 'customer_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
+			array( 'name' => 'customer_id', 'type' => 'bigint', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'billing_email', 'type' => 'varchar', 'length' => '320', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'date_created_gmt', 'type' => 'datetime', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'date_updated_gmt', 'type' => 'datetime', 'allow_null' => true, 'default' => null ),
-			array( 'name' => 'parent_order_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
+			array( 'name' => 'parent_order_id', 'type' => 'bigint', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'payment_method', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'payment_method_title', 'type' => 'text', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'transaction_id', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => null ),

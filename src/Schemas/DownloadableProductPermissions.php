@@ -23,17 +23,17 @@ class DownloadableProductPermissions extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'permission_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'permission_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
 			array( 'name' => 'download_id', 'type' => 'varchar', 'length' => '36', 'default' => false ),
-			array( 'name' => 'product_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
-			array( 'name' => 'order_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => '0' ),
+			array( 'name' => 'product_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'order_id', 'type' => 'bigint', 'unsigned' => true, 'default' => '0' ),
 			array( 'name' => 'order_key', 'type' => 'varchar', 'length' => '200', 'default' => false ),
 			array( 'name' => 'user_email', 'type' => 'varchar', 'length' => '200', 'default' => false ),
-			array( 'name' => 'user_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
+			array( 'name' => 'user_id', 'type' => 'bigint', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'downloads_remaining', 'type' => 'varchar', 'length' => '9', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'access_granted', 'type' => 'datetime', 'default' => '0000-00-00 00:00:00' ),
 			array( 'name' => 'access_expires', 'type' => 'datetime', 'allow_null' => true, 'default' => null ),
-			array( 'name' => 'download_count', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => '0' ),
+			array( 'name' => 'download_count', 'type' => 'bigint', 'unsigned' => true, 'default' => '0' ),
 	);
 
 	/** @var array<int, array<string, mixed>> */
