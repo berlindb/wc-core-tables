@@ -23,8 +23,8 @@ class ShippingZoneLocations extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'location_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
-			array( 'name' => 'zone_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'location_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'zone_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
 			array( 'name' => 'location_code', 'type' => 'varchar', 'length' => '200', 'default' => false ),
 			array( 'name' => 'location_type', 'type' => 'varchar', 'length' => '40', 'default' => false ),
 	);

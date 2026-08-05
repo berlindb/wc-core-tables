@@ -23,10 +23,10 @@ class Webhooks extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'webhook_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'webhook_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
 			array( 'name' => 'status', 'type' => 'varchar', 'length' => '200', 'default' => false ),
 			array( 'name' => 'name', 'type' => 'text' ),
-			array( 'name' => 'user_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'user_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
 			array( 'name' => 'delivery_url', 'type' => 'text' ),
 			array( 'name' => 'secret', 'type' => 'text' ),
 			array( 'name' => 'topic', 'type' => 'varchar', 'length' => '200', 'default' => false ),
@@ -34,8 +34,8 @@ class Webhooks extends Schema {
 			array( 'name' => 'date_created_gmt', 'type' => 'datetime', 'default' => '0000-00-00 00:00:00' ),
 			array( 'name' => 'date_modified', 'type' => 'datetime', 'default' => '0000-00-00 00:00:00' ),
 			array( 'name' => 'date_modified_gmt', 'type' => 'datetime', 'default' => '0000-00-00 00:00:00' ),
-			array( 'name' => 'api_version', 'type' => 'smallint', 'length' => '4', 'unsigned' => false, 'default' => false ),
-			array( 'name' => 'failure_count', 'type' => 'smallint', 'length' => '10', 'unsigned' => false, 'default' => '0' ),
+			array( 'name' => 'api_version', 'type' => 'smallint', 'unsigned' => false, 'default' => false ),
+			array( 'name' => 'failure_count', 'type' => 'smallint', 'unsigned' => false, 'default' => '0' ),
 			array( 'name' => 'pending_delivery', 'type' => 'tinyint', 'length' => '1', 'unsigned' => false, 'default' => '0' ),
 	);
 

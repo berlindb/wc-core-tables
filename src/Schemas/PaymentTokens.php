@@ -23,10 +23,10 @@ class PaymentTokens extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'token_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'token_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
 			array( 'name' => 'gateway_id', 'type' => 'varchar', 'length' => '200', 'default' => false ),
 			array( 'name' => 'token', 'type' => 'text' ),
-			array( 'name' => 'user_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => '0' ),
+			array( 'name' => 'user_id', 'type' => 'bigint', 'unsigned' => true, 'default' => '0' ),
 			array( 'name' => 'type', 'type' => 'varchar', 'length' => '200', 'default' => false ),
 			array( 'name' => 'is_default', 'type' => 'tinyint', 'length' => '1', 'unsigned' => false, 'default' => '0' ),
 	);
