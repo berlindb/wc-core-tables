@@ -23,8 +23,8 @@ class CategoryLookup extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'category_tree_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
-			array( 'name' => 'category_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'category_tree_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'category_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
 	);
 
 	/** @var array<int, array<string, mixed>> */

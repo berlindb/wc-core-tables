@@ -23,10 +23,10 @@ class ProductAttributesLookup extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'product_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => false, 'default' => false ),
-			array( 'name' => 'product_or_parent_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => false, 'default' => false ),
+			array( 'name' => 'product_id', 'type' => 'bigint', 'unsigned' => false, 'default' => false ),
+			array( 'name' => 'product_or_parent_id', 'type' => 'bigint', 'unsigned' => false, 'default' => false ),
 			array( 'name' => 'taxonomy', 'type' => 'varchar', 'length' => '32', 'default' => false ),
-			array( 'name' => 'term_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => false, 'default' => false ),
+			array( 'name' => 'term_id', 'type' => 'bigint', 'unsigned' => false, 'default' => false ),
 			array( 'name' => 'is_variation_attribute', 'type' => 'tinyint', 'length' => '1', 'unsigned' => false, 'default' => false ),
 			array( 'name' => 'in_stock', 'type' => 'tinyint', 'length' => '1', 'unsigned' => false, 'default' => false ),
 	);
