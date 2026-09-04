@@ -23,8 +23,8 @@ class OrderAddresses extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
-			array( 'name' => 'order_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'order_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
 			array( 'name' => 'address_type', 'type' => 'varchar', 'length' => '20', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'first_name', 'type' => 'text', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'last_name', 'type' => 'text', 'allow_null' => true, 'default' => null ),

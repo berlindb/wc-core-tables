@@ -23,8 +23,8 @@ class OrderOperationalData extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
-			array( 'name' => 'order_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
+			array( 'name' => 'id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'order_id', 'type' => 'bigint', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'created_via', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'woocommerce_version', 'type' => 'varchar', 'length' => '20', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'prices_include_tax', 'type' => 'tinyint', 'length' => '1', 'unsigned' => false, 'allow_null' => true, 'default' => null ),

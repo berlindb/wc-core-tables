@@ -23,7 +23,7 @@ class ProductMetaLookup extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'product_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => false, 'primary' => true, 'default' => false ),
+			array( 'name' => 'product_id', 'type' => 'bigint', 'unsigned' => false, 'primary' => true, 'default' => false ),
 			array( 'name' => 'sku', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => '' ),
 			array( 'name' => 'global_unique_id', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => '' ),
 			array( 'name' => 'virtual', 'type' => 'tinyint', 'length' => '1', 'unsigned' => false, 'allow_null' => true, 'default' => '0' ),
@@ -33,9 +33,9 @@ class ProductMetaLookup extends Schema {
 			array( 'name' => 'onsale', 'type' => 'tinyint', 'length' => '1', 'unsigned' => false, 'allow_null' => true, 'default' => '0' ),
 			array( 'name' => 'stock_quantity', 'type' => 'double', 'unsigned' => false, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'stock_status', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => 'instock' ),
-			array( 'name' => 'rating_count', 'type' => 'bigint', 'length' => '20', 'unsigned' => false, 'allow_null' => true, 'default' => '0' ),
+			array( 'name' => 'rating_count', 'type' => 'bigint', 'unsigned' => false, 'allow_null' => true, 'default' => '0' ),
 			array( 'name' => 'average_rating', 'type' => 'decimal', 'length' => '3', 'scale' => '2', 'unsigned' => false, 'allow_null' => true, 'default' => '0.00' ),
-			array( 'name' => 'total_sales', 'type' => 'bigint', 'length' => '20', 'unsigned' => false, 'allow_null' => true, 'default' => '0' ),
+			array( 'name' => 'total_sales', 'type' => 'bigint', 'unsigned' => false, 'allow_null' => true, 'default' => '0' ),
 			array( 'name' => 'tax_status', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => 'taxable' ),
 			array( 'name' => 'tax_class', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => '' ),
 	);
