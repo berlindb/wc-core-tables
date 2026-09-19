@@ -23,9 +23,9 @@ class Log extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'log_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'log_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
 			array( 'name' => 'timestamp', 'type' => 'datetime', 'default' => false ),
-			array( 'name' => 'level', 'type' => 'smallint', 'length' => '4', 'unsigned' => false, 'default' => false ),
+			array( 'name' => 'level', 'type' => 'smallint', 'unsigned' => false, 'default' => false ),
 			array( 'name' => 'source', 'type' => 'varchar', 'length' => '200', 'default' => false ),
 			array( 'name' => 'message', 'type' => 'longtext' ),
 			array( 'name' => 'context', 'type' => 'longtext', 'allow_null' => true, 'default' => null ),

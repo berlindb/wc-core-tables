@@ -23,7 +23,7 @@ class EmailUnsubscribes extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
 			array( 'name' => 'email_hash', 'type' => 'char', 'length' => '64', 'default' => false ),
 			array( 'name' => 'email_kind', 'type' => 'varchar', 'length' => '64', 'default' => false ),
 			array( 'name' => 'action', 'type' => 'varchar', 'length' => '20', 'default' => false ),

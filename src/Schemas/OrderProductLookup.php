@@ -23,13 +23,13 @@ class OrderProductLookup extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'order_item_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
-			array( 'name' => 'order_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
-			array( 'name' => 'product_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
-			array( 'name' => 'variation_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'default' => false ),
-			array( 'name' => 'customer_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
+			array( 'name' => 'order_item_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'order_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'product_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'variation_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'customer_id', 'type' => 'bigint', 'unsigned' => true, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'date_created', 'type' => 'datetime', 'default' => 'CURRENT_TIMESTAMP' ),
-			array( 'name' => 'product_qty', 'type' => 'int', 'length' => '11', 'unsigned' => false, 'default' => false ),
+			array( 'name' => 'product_qty', 'type' => 'int', 'unsigned' => false, 'default' => false ),
 			array( 'name' => 'product_net_revenue', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),
 			array( 'name' => 'product_gross_revenue', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),
 			array( 'name' => 'coupon_amount', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),
