@@ -23,12 +23,12 @@ class AttributeTaxonomies extends Schema {
 
 	/** @var array<int, array<string, mixed>> */
 	public $columns = array(
-			array( 'name' => 'attribute_id', 'type' => 'bigint', 'length' => '20', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
+			array( 'name' => 'attribute_id', 'type' => 'bigint', 'unsigned' => true, 'extra' => 'auto_increment', 'primary' => true ),
 			array( 'name' => 'attribute_name', 'type' => 'varchar', 'length' => '200', 'default' => false ),
 			array( 'name' => 'attribute_label', 'type' => 'varchar', 'length' => '200', 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'attribute_type', 'type' => 'varchar', 'length' => '20', 'default' => false ),
 			array( 'name' => 'attribute_orderby', 'type' => 'varchar', 'length' => '20', 'default' => false ),
-			array( 'name' => 'attribute_public', 'type' => 'int', 'length' => '1', 'unsigned' => false, 'default' => '1' ),
+			array( 'name' => 'attribute_public', 'type' => 'int', 'unsigned' => false, 'default' => '1' ),
 	);
 
 	/** @var array<int, array<string, mixed>> */
