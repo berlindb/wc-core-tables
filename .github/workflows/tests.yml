@@ -31,9 +31,9 @@ jobs:
       fail-fast: false
       matrix:
         php: [ '8.1', '8.3' ]
-        # WooCommerce is built (pnpm monorepo), so we test released, pre-built plugin
-        # zips from wordpress.org rather than a bare git checkout. 'latest' is the
-        # authoritative gate.
+        # WooCommerce is built (pnpm monorepo), so test a released, pre-built plugin
+        # zip from WordPress.org rather than a bare git checkout. Resolve the stable
+        # version: the unversioned zip can point at a prerelease from plugin trunk.
         wc:  [ 'latest' ]
 
     steps:
@@ -51,7 +51,11 @@ jobs:
       - name: Download WooCommerce (pre-built plugin zip)
         run: |
           if [ "${{ matrix.wc }}" = "latest" ]; then
-            URL="https://downloads.wordpress.org/plugin/woocommerce.zip"
+            INFO=$(curl -fsSL 'https://api.wordpress.org/plugins/info/1.2/?action=plugin_information&request%5Bslug%5D=woocommerce')
+            VERSION=$(jq -er '.version' <<< "$INFO")
+            [[ "$VERSION" =~ ^[0-9]+(\.[0-9]+)*$ ]]
+            URL=$(jq -er '.download_link' <<< "$INFO")
+            echo "WordPress.org stable WooCommerce version: $VERSION"
           else
             URL="https://downloads.wordpress.org/plugin/woocommerce.${{ matrix.wc }}.zip"
           fi
