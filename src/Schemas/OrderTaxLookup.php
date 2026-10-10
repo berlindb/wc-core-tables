@@ -25,16 +25,18 @@ class OrderTaxLookup extends Schema {
 	public $columns = array(
 			array( 'name' => 'order_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
 			array( 'name' => 'tax_rate_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'order_item_id', 'type' => 'bigint', 'unsigned' => true, 'default' => '0' ),
 			array( 'name' => 'date_created', 'type' => 'datetime', 'default' => '0000-00-00 00:00:00' ),
 			array( 'name' => 'shipping_tax', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),
 			array( 'name' => 'order_tax', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),
 			array( 'name' => 'total_tax', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),
+			array( 'name' => 'taxable_amount', 'type' => 'double', 'unsigned' => false, 'default' => '0' ),
 	);
 
 	/** @var array<int, array<string, mixed>> */
 	public $indexes = array(
 			array( 'type' => 'key', 'name' => 'date_created', 'columns' => array( 'date_created' ) ),
-			array( 'type' => 'primary', 'columns' => array( 'order_id', 'tax_rate_id' ) ),
+			array( 'type' => 'primary', 'columns' => array( 'order_id', 'tax_rate_id', 'order_item_id' ) ),
 			array( 'type' => 'key', 'name' => 'tax_rate_id', 'columns' => array( 'tax_rate_id' ) ),
 	);
 }
