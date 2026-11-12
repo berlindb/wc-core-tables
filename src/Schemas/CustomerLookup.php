@@ -35,6 +35,8 @@ class CustomerLookup extends Schema {
 			array( 'name' => 'postcode', 'type' => 'varchar', 'length' => '20', 'default' => '' ),
 			array( 'name' => 'city', 'type' => 'varchar', 'length' => '100', 'default' => '' ),
 			array( 'name' => 'state', 'type' => 'varchar', 'length' => '100', 'default' => '' ),
+			array( 'name' => 'billing_phone', 'type' => 'varchar', 'length' => '100', 'default' => '' ),
+			array( 'name' => 'shipping_phone', 'type' => 'varchar', 'length' => '100', 'default' => '' ),
 	);
 
 	/** @var array<int, array<string, mixed>> */
