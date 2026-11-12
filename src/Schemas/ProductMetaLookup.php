@@ -43,6 +43,7 @@ class ProductMetaLookup extends Schema {
 	/** @var array<int, array<string, mixed>> */
 	public $indexes = array(
 			array( 'type' => 'key', 'name' => 'downloadable', 'columns' => array( 'downloadable' ) ),
+			array( 'type' => 'key', 'name' => 'global_unique_id', 'columns' => array( 'global_unique_id(50)' ) ),
 			array( 'type' => 'key', 'name' => 'min_max_price', 'columns' => array( 'min_price', 'max_price' ) ),
 			array( 'type' => 'key', 'name' => 'onsale', 'columns' => array( 'onsale' ) ),
 			array( 'type' => 'primary', 'columns' => array( 'product_id' ) ),
