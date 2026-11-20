@@ -37,6 +37,7 @@ class OrderStats extends Schema {
 			array( 'name' => 'returning_customer', 'type' => 'tinyint', 'length' => '1', 'unsigned' => false, 'allow_null' => true, 'default' => null ),
 			array( 'name' => 'status', 'type' => 'varchar', 'length' => '20', 'default' => false ),
 			array( 'name' => 'customer_id', 'type' => 'bigint', 'unsigned' => true, 'default' => false ),
+			array( 'name' => 'payment_method', 'type' => 'varchar', 'length' => '100', 'allow_null' => true, 'default' => null ),
 	);
 
 	/** @var array<int, array<string, mixed>> */
@@ -44,6 +45,7 @@ class OrderStats extends Schema {
 			array( 'type' => 'key', 'name' => 'customer_id', 'columns' => array( 'customer_id' ) ),
 			array( 'type' => 'key', 'name' => 'date_created', 'columns' => array( 'date_created' ) ),
 			array( 'type' => 'key', 'name' => 'idx_date_paid_status_parent', 'columns' => array( 'date_paid', 'status', 'parent_id' ) ),
+			array( 'type' => 'key', 'name' => 'idx_payment_method_date_paid_status', 'columns' => array( 'payment_method', 'date_paid', 'status' ) ),
 			array( 'type' => 'primary', 'columns' => array( 'order_id' ) ),
 			array( 'type' => 'key', 'name' => 'status', 'columns' => array( 'status' ) ),
 	);
