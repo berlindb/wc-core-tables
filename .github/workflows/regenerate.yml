@@ -37,13 +37,23 @@ jobs:
           ref: master
           path: berlindb-core
 
-      - name: Setup PHP + WP-CLI
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
           extensions: mysqli, intl, gd, zip
-          tools: composer, wp-cli
+          tools: composer
           coverage: none
+
+      - name: Install WP-CLI
+        run: |
+          curl -fsSL --retry 3 https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -o "$RUNNER_TEMP/wp-cli.phar"
+          curl -fsSL --retry 3 https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar.sha512 -o "$RUNNER_TEMP/wp-cli.phar.sha512"
+          printf '%s  %s\n' "$(cat "$RUNNER_TEMP/wp-cli.phar.sha512")" "$RUNNER_TEMP/wp-cli.phar" | sha512sum --check
+          mkdir -p "$RUNNER_TEMP/bin"
+          install -m 755 "$RUNNER_TEMP/wp-cli.phar" "$RUNNER_TEMP/bin/wp"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/bin/wp" --info
 
       - name: Install dependencies
         run: |
